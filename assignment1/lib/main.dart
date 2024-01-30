@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         //default route
         backgroundColor: Colors.blueGrey,
         appBar: AppBar(
-          title: const Text("App1 - UI Layout"),
+          title: const Text("Assignment 1 - UI Layout"),
           backgroundColor: Colors.blue,
         ),
         body: Row(
@@ -33,14 +33,19 @@ class MyApp extends StatelessWidget {
           children: [
             Column(
               children: [
-                Container(
-                  color: Colors.yellow[700],
-                  height: 100,
-                  width: 100,
-                  child: const Text('Container 1'),
-                  padding: const EdgeInsets.all(16.0),
-                  
-                ),
+              Container(
+                decoration: BoxDecoration(
+                color: Colors.yellow[700], // Container color
+                border: Border.all(
+                color: Colors.black, // Border color
+                width: 3.0, // Border width
+    ),
+  ),
+            height: 100,
+            width: 100,
+            child: const Text('Container 1'),
+            padding: const EdgeInsets.all(16.0),
+),
                 Transform.rotate(
                   angle: pi / 4,
                   child: Container(
@@ -61,6 +66,7 @@ class MyApp extends StatelessWidget {
                  child: Padding(
                    padding: const EdgeInsets.only(top: 8.0),
                    child: Container(
+                  height: 100.0,
                      width: 100.0,
                      color: Colors.yellow,
                      child: const Align(
@@ -70,12 +76,13 @@ class MyApp extends StatelessWidget {
                    ),
                  ),
                ),
-               const SizedBox(height: 20),
+               const SizedBox(height: 10),
                Expanded(
                  flex: 1,
                  child: Padding(
                    padding:const EdgeInsets.only(bottom: 8.0),
                    child: Container(
+                    height: 100.0,
                      width: 100.0,
                      color: Colors.lightBlue,
                      child: const Align(
@@ -93,15 +100,19 @@ class MyApp extends StatelessWidget {
                   decoration: const BoxDecoration(
                     color: Colors.black,
                     shape: BoxShape.circle,
+
                   ),
                   child: const Text('Container 5', style: TextStyle(color: Colors.white)),
                   padding: const EdgeInsets.all(16.0),
+                    margin: const EdgeInsets.only(top:230),
                 ),
+               const SizedBox(height: 100),
                 Expanded(
                   child: Container(
                     color: Colors.red,
-                    height: 100,
-                    width: 100,
+                    height: 100.0,
+                    width: 100.0,
+                    margin: const EdgeInsets.only(bottom:100),
                     child: const Text('Container 6', style: TextStyle(color: Colors.white)),
                     padding: const EdgeInsets.all(16.0),
                     alignment: Alignment.center,
@@ -112,6 +123,6 @@ class MyApp extends StatelessWidget {
           ],
         ),
       ),
-    );
+    );         
   }
 }
